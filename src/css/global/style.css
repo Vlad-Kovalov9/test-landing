@@ -3,16 +3,27 @@ body {
   background-color: #181818;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   max-width: 549px;
   margin: 0 auto;
   padding: 50px;
-  width: 100%;
 }
 
-@media (min-width: 1579px) {
+@media (min-width: 1280px) {
   .container {
     max-width: 1087px;
-    padding: 50 246px;
   }
 }
