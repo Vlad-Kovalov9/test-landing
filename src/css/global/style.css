@@ -9,3 +9,10 @@ body {
   padding: 50px;
   width: 100%;
 }
+
+@media (min-width: 1579px) {
+  .container {
+    max-width: 1087px;
+    padding: 50 246px;
+  }
+}
