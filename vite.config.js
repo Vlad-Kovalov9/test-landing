@@ -1,35 +1,38 @@
-import { defineConfig } from "vite";
-import glob from "glob";
-import injectHTML from "vite-plugin-html-inject";
-import FullReload from "vite-plugin-full-reload";
+import { defineConfig } from 'vite';
+import glob from 'glob';
+import injectHTML from 'vite-plugin-html-inject';
+import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig(({ command }) => {
   return {
     define: {
-      [command === "serve" ? "global" : "_global"]: {},
+      [command === 'serve' ? 'global' : '_global']: {},
     },
-    root: "src",
+    root: 'src',
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync("./src/*.html"),
+        input: glob.sync('./src/*.html'),
         output: {
           manualChunks(id) {
-            if (id.includes("node_modules")) {
-              if (id.includes("slick-carousel")) {
-                return "slick";
+            if (id.includes('node_modules')) {
+              if (id.includes('slick-carousel')) {
+                return 'slick';
               }
-              return "vendor";
+              return 'vendor';
             }
           },
-          entryFileNames: "commonHelpers.js",
+          entryFileNames: 'commonHelpers.js',
         },
       },
-      outDir: "../dist",
+      outDir: '../dist',
     },
-    plugins: [injectHTML(), FullReload(["./src/**/**.html"])],
+    plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
     optimizeDeps: {
-      include: ["slick-carousel"],
+      include: ['slick-carousel'],
+    },
+    server: {
+      open: true,
     },
   };
 });
