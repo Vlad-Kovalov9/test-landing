@@ -89,14 +89,13 @@
 
 .hero__btn__try:hover,
 .hero__btn__try:focus {
-  background-color: aqua;
-  color: black;
+  background-color: rgb(171, 33, 171);
 }
 
 .hero__btn__more:hover,
 .hero__btn__more:focus {
-  background-color: #ffffff;
-  color: black;
+  background-color: orangered;
+  border: none;
 }
 
 @media (min-width: 1280px) {
