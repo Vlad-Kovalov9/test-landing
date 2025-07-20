@@ -1,3 +1,50 @@
-h1 {
-  color: aqua;
+.header__logo {
+  width: 206px;
+  height: 78px;
+  padding-left: 24px;
+}
+
+.header__log__btn {
+  border: 1px solid white;
+  background: var(--dark-background);
+  padding: 20px 36px;
+  margin-left: 82px;
+  width: 139px;
+  /* height: 52px; */
+  box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 0.15);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 147%;
+  letter-spacing: 0.01em;
+  color: white;
+  display: block;
+  text-align: center;
+
+}
+
+.header__container {
+  padding-top: -50px;
+  display: flex;
+  align-items: center;
+}
+
+.header__nav__list {
+  display: none;
+}
+
+.btn__burger {
+  background: transparent;
+  margin-left: 16px;
+}
+
+/* //////////Mobile first////////////// */
+
+@media screen and (max-width:1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+
+
 }
